@@ -12,12 +12,14 @@ $ham.addEventListener("click", () => {
 });
 
 var swiper = new Swiper(".mySwiper", {
-  effect: "cards",
-  grabCursor: true,
-  cardsEffect: {
-    perSlideOffset: 10,
-    perSlideRotate: 0,
-    slideShadows: false,
-    rotate: false,
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
   },
 });
