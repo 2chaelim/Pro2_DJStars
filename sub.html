@@ -96,7 +96,7 @@
               <p class="title1">1. 관람일정 선택</p>
               <div class="date-con">
                 <div class="calendar"></div>
-                <div class="sche on">
+                <div class="sche">
                   <p class="date-ts">
                     <span class="t1">선택</span>
                     <span class="t1">구분</span>
@@ -150,21 +150,182 @@
             </li>
             <li class="per-info">
               <p class="title2">2. 예약자 정보</p>
-              <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi,
-                laborum.
+              <ul class="per-con">
+                <li><span>예약자명</span><input type="text" /></li>
+                <li><span>연락처</span><input type="tel" /></li>
+                <li>
+                  <span>이메일</span><input type="email" /> @
+                  <input type="text" list="dom-list" />
+                  <datalist id="dom-list">
+                    <option value="gmail.com"></option>
+                    <option value="hanmail.net"></option>
+                    <option value="nate.com"></option>
+                    <option value="naver.com"></option>
+                    <option value="직접 입력"></option>
+                  </datalist>
+                </li>
+                <li>
+                  <span>비밀번호</span
+                  ><input
+                    type="password"
+                    placeholder="예약 확인 시 필요하오니 반드시 입력하십시오."
+                    id="essen"
+                  />
+                </li>
+              </ul>
+              <div class="refer">
+                <p>
+                  * 이메일 : 예약내역이 발송됩니다. 실제로 사용하는 이메일을
+                  입력해주세요.
+                </p>
+                <p>
+                  * 예약확인 : 예약 시 설정하신 비밀번호를 이용하여
+                  확인가능합니다. 본인만 아는 정보를 입력해주세요.
+                </p>
               </div>
             </li>
             <li class="group-info">
               <p class="title3">3. 관람단체 정보</p>
-              <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dignissimos, vitae?
-              </div>
+              <ul class="group-con">
+                <li><span>단체명</span><input type="text" /></li>
+                <li>
+                  <span>지역</span>
+                  <select name="region" id="region">
+                    <option value="none">지역선택</option>
+                    <option value="daejeon">대전</option>
+                    <option value="sejong">세종</option>
+                    <option value="seoul">서울</option>
+                    <option value="gangwon">강원</option>
+                    <option value="gyeonggi">경기</option>
+                    <option value="gyeongnam">경남</option>
+                    <option value="gyeongbuk">경북</option>
+                    <option value="jeonnam">전남</option>
+                    <option value="jeonbuk">전북</option>
+                    <option value="chungman">충남</option>
+                    <option value="chungbuk">충북</option>
+                    <option value="busan">부산</option>
+                    <option value="daegu">대구</option>
+                    <option value="incheon">인천</option>
+                    <option value="gyangju">광주</option>
+                    <option value="ulsan">울산</option>
+                    <option value="jejudo">제주도</option>
+                    <option value="ulleungdo">울릉도</option>
+                  </select>
+                </li>
+                <li>
+                  <span>관람인원 수</span>
+                  <input type="number" min="30" max="80" />
+                </li>
+                <li>
+                  <span>관람자 연령</span><input type="text" /><span class="age"
+                    >세 (평균연령으로 입력해주세요)</span
+                  >
+                </li>
+                <li>
+                  <span>인솔자</span>
+                  <select name="leader" id="leader">
+                    <option value="none">인솔자 유/무</option>
+                    <option value="exist">있음</option>
+                    <option value="nonexist">없음</option>
+                  </select>
+                </li>
+                <li>
+                  <span>기타사항</span>
+                  <textarea name="etc" id="etc" cols="60" rows="10"></textarea>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
+        <div class="agree">
+          <div class="agr-con">
+            <p class="agr-t">개인정보 수집 및 이용동의</p>
+            <ul>
+              <li>
+                <p class="arg-conT">정보의 수집/이용 목적</p>
+                <p class="arg-cont">
+                  "대전시민천문대"이(가) 수집하는 사용자의 개인정보는 교육/관람
+                  예약 서비스를 위한 목적으로 수집하여 이 외의 목적으로 일체
+                  사용하지 않습니다.
+                </p>
+              </li>
+              <li>
+                <p class="arg-conT">개인정보의 수집범위</p>
+                <p class="arg-cont">
+                  "대전시민천문대"이(가) 교육/관람 예약 서비스를 위한 목적으로
+                  수집하는 개인정보는 다음과 같습니다. <br />* 필수항목 : 이름,
+                  비밀번호, 이메일주소, 연락처
+                </p>
+              </li>
+              <li>
+                <p class="arg-conT">개인정보 보유기간</p>
+                <p class="arg-cont">
+                  개인정보는 정보 확인 후 1년 이내 파기됩니다.
+                </p>
+              </li>
+            </ul>
+            <p class="agr-warn">
+              위 내용에 동의하지 않을 시 서비스 이용이 제한될 수 있습니다.
+            </p>
+          </div>
+          <div class="agr-btn">
+            <label for="agree">
+              <input type="checkbox" id="agree" /> 위 내용에 동의하며 개인
+              정보를 제공합니다.</label
+            >
+            <button>예약신청</button>
+          </div>
+        </div>
       </section>
+      <footer class="ft">
+        <div class="li1">
+          <div class="ft-T mw">
+            <img src="./img/logo-white.png" alt="" />
+            <div>
+              <a href="#">기관사이트</a>
+              <a href="#">지역별천문대</a>
+              <a href="#">카페</a>
+            </div>
+          </div>
+        </div>
+        <div class="ft-wrap mw">
+          <div class="li2">
+            <div class="ft-L">
+              <p>정보<span></span></p>
+              <ul>
+                <li>(34128) 대전광역시 유성구 과학로 213-48 (신성동 7-13)</li>
+                <li>TEL. 042-863-8762, 8763</li>
+                <li>FAX. 042-863-8761</li>
+              </ul>
+            </div>
+            <div class="ft-R">
+              <p>이용안내<span></span></p>
+              <ul>
+                <li>
+                  <p><i class="fa-regular fa-clock"></i> 운영시간</p>
+                  <p>14:00 ~ 22:00 (입장마감 21:50분까지)</p>
+                </li>
+                <li>
+                  <p><i class="fa-regular fa-clock"></i> 휴관일</p>
+                  <p>매주 월요일, 공휴일 다음날, 명절 및 신정 연휴</p>
+                </li>
+                <li>
+                  <p><i class="fa-solid fa-won-sign"></i> 이용요금</p>
+                  <p>무료</p>
+                </li>
+                <li>
+                  <p><i class="fa-solid fa-phone"></i>전화문의</p>
+                  <p>042-863-8762, 8763 (13:00 ~ 22:00)</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <p class="cr">
+          Copyright <i class="fa-regular fa-copyright"></i> 2017 Daejeon
+          Observatory.All rights reserved
+        </p>
+      </footer>
     </div>
   </body>
 </html>
