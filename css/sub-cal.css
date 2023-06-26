@@ -20,12 +20,10 @@
 }
 
 .calendar {
+  border: 2px solid green;
   position: relative;
-  /* max-width: 400px;
-  min-width: 320px; */
   background: var(--calendar-bg-color);
   color: var(--calendar-font-color);
-  /* margin: 20px auto; */
   box-sizing: border-box;
   overflow: hidden;
   font-weight: normal;
@@ -33,10 +31,13 @@
 }
 
 .calendar-inner {
-  padding: 10px 10px;
+  border: 1px solid blue;
+  width: 100%;
 }
 
 .calendar .calendar-inner .calendar-body {
+  border: 1px solid red;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;

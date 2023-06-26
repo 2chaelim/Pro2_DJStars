@@ -222,7 +222,6 @@ main {
 }
 @media (max-width: 1340px) {
   .top-menu > li {
-    /* border: none; */
     margin: 0.25rem;
   }
   .main-menu > a {
@@ -334,6 +333,7 @@ main {
   padding-top: 0.5rem;
 }
 .mySwiper {
+  border-radius: 0 60px 0 0;
   height: 100%;
 }
 
@@ -600,6 +600,13 @@ main {
   color: var(--sub_c1);
   border-bottom: 1px solid var(--sub_c1);
 }
+.noti-con li a,
+.faq-con li a {
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .noti-con > a:nth-of-type(1),
 .noti-con > a:nth-of-type(2),
 .faq-con > a:nth-of-type(1),
@@ -657,18 +664,20 @@ main {
   .noti-con,
   .faq-con {
     width: 75%;
+    padding: 2.5rem 1rem;
   }
-  .noti-con li a,
-  .faq-con li a {
-    width: 60%;
+  .noti li,
+  .faq li {
+    width: 100%;
+    display: block;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
   .noti-con p,
   .faq-con p {
-    width: 40%;
-    text-align: end;
+    width: 100%;
+    text-align: start;
   }
 }
 
